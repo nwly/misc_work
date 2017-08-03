@@ -2,13 +2,8 @@ function [pfinish, iterations] = pagerank_iter(G, alpha)
 %Pagerank Algorithm
 
 %eliminate self-referential links in G
-Gprocess = G;
+Gprocess = G - diag(diag(G));
 R = length(Gprocess);
-for i = 1:R
-    if Gprocess(i,i) ~= 0
-        Gprocess(i,i) = 0;
-    end
-end
 
 %Construct P using new G
 P = sparse(zeros(R));
