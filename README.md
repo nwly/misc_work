@@ -1,4 +1,4 @@
-# pyrecipes
+# misc_work
 Warehouse for various code recipes and notebooks.
 
   - Parallel programming example (`py2/parallel.py`)
